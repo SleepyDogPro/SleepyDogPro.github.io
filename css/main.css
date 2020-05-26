@@ -1,0 +1,248 @@
+/* GLOBAL STYLES */
+body {
+  box-shadow: 0 0 0 30px #FCE2D7 inset;
+  padding: 0 30px 0 0px;
+}
+body {
+  font-family: helvetica, arial, sans;
+}
+h1 {
+  font-size: 7vw;
+  position: relative;
+  z-index: 0;
+  margin: 0 0 100px;
+  padding-top: 300px;
+  transform: translate(55%);      /*Just Playing Around*/
+  width: 50%;
+}
+a {
+  color: #62afdb;
+}
+h2 {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+
+/* HEADER STYLES */
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  /* background-color: rgba(237, 110, 47, 0.4); */
+}
+.header_nav {
+  float: right;
+  padding: 5.5vh 60px 0 0;
+}
+.header_nav > li {
+  display: inline-block;
+  margin-left: 1em;
+}
+.header_nav > li ~ li {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 1em;
+}
+.header_nav a {
+  /* color: #fff; */
+  color: #000;
+}
+.header_nav a:hover,
+.header_nav a:active {
+  color: #ed6e2f;
+}
+.header_nav > li:first-child a {
+  color: #ed6e2f;
+}
+.header_nav > li:first-child a:hover,
+.header_nav > li:first-child a:active {
+  /* color: #fff; */
+  color: #000;
+}
+.header_logo {
+  /* background-color: rgba(237, 110, 47, 0.4); */
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  /* left: -30px; */
+  padding: 1rem;
+  position: relative; /* takes out of flow of content */
+  text-align: center; /* images are an inline element (use text-align to center it within the box)*/
+  width: 10vh;
+}
+.header_logo:hover,
+.header_logo:active {
+  /* opacity: 0.5; */
+  /* background-color: rgba(237, 110, 47, 0.4); */
+  background-color: #ed6e2f;
+}
+.header_logo img {
+  /* height: 70%; */
+  width: 6vh;
+}
+.header_nav > li:last-child a {
+  color: #004680;
+}
+.header_nav > li:last-child a:hover,
+.header_nav > li:last-child a:active {
+  color: blue;
+}
+
+
+.nav_links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav_links a:hover,
+.nav_links a:active {
+  color: #ed6e2f;
+}
+
+/* FOOTER STYLES */
+.footer {
+  background-color: #FCE2D7;
+  /* background-color: #FDF2EE; */
+  padding: 10vh 0 15vh;
+  text-align: center;
+}
+.footer_logo img {
+  width: 250px;
+}
+.footer h3 {
+  color: #000;
+  padding: 1.5em;
+  text-transform: uppercase;
+}
+.footer h3 span {
+  color: #aaa;
+}
+.footer_nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer_nav a {
+  color: #000;
+}
+
+/* HERO STYLES */
+.full_hero {
+  /* background-color: #c7dbfc; */
+  background-color: #FCE2D7;
+  height: 100vh;
+  margin-left: 30px;
+  /* box-shadow: 10px 10px 10px 0 #000; */
+}
+
+.full_hero:hover,
+.full_hero:active {
+  /* background-color: rgba(237, 110, 47, 0.4); */
+  /* background-color: #c7dbfc; */
+
+}
+
+/* SOCIAL STYLES –– elements used across the site */
+.social_link {    /*Global styles that––no matter where they are used on the site––will look uniform*/
+  background: #ffcc17;
+  border-radius: 99px;
+  box-sizing: border-box; /*padding and border are contained within the width of the element*/
+  color: #0000ff;
+  display: inline-block;
+  font-family: helvetica, arial, sans;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.5em;
+  line-height: 1;
+  padding-top: .6em;
+  text-align: center;
+  text-decoration: none;
+  width: 2.5em;
+  /* height: 1rem; */
+}
+.social_link:hover,
+.social_link:active {
+  background-color: rgba(237, 110, 47, .8);
+}
+.social_list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.social_list > li {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+/* MODULES (BIO STYLES)*/
+.bio_wrapper {
+  overflow: hidden;
+  margin: 0 auto 3em;
+  max-width: 960px;
+
+}
+.bio_box {
+  /* border: 1px dotted black; */
+  border-width: 5px 5px 1px 1px;
+  border-style: solid solid dotted dotted;
+  border-color: orange orange #004680 #004680;
+  box-sizing: border-box;
+  float: left;
+  font-size: 1rem;
+  margin: 40px 1%;
+  padding: 2% 2.5% 2% 2.5%;
+  position: relative;
+  width: 23%;
+}
+.bio_box h3 {
+  color: black;
+  font-size: 1.5rem;
+  margin: -32px 0 1em 0em;
+  /* right: 0px; */
+  display: inline;
+  text-align: center;
+  /* z-index: 1; position: fixed; */
+}
+.bio_box img {
+  width: 100%;
+  /* filter: grayscale(100%) */
+  /* z-index: -1; */
+}
+
+.bio_box .social_link {
+  display: block;
+  margin: 1em 0;
+}
+.bio_copy {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.bio_copy a {
+  color: rgba(255,0,0,0.45);
+}
+.of_their_own {
+  /* border: 1px dashed black; */
+  border-style: dashed;
+  border-width: 5px 5px 1px 1px;
+  border-color: orange orange #004680 #004680;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.hero_home {
+} */
+/* width: 75vw; */
+/* .full_hero li {
+  display: inline;
+} */
