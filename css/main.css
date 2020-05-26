@@ -20,7 +20,7 @@ a {
 }
 h2 {
   font-size: 30px;
-  margin-left: 30px;
+  margin: 10px 0 25px 355px;
 }
 
 
@@ -103,8 +103,8 @@ h2 {
 
 /* FOOTER STYLES */
 .footer {
-  background-color: #FCE2D7;
-  /* background-color: #FDF2EE; */
+  /* background-color: #FCE2D7; */
+  background-color: #FDF2EE;
   padding: 10vh 0 15vh;
   text-align: center;
 }
@@ -115,13 +115,15 @@ h2 {
   color: #000;
   padding: 1.5em;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .footer h3 span {
   color: #aaa;
 }
 .footer_nav li {
   display: inline-block;
-  margin: 2em 1em 0;
+  /* margin: 2em 1em 0; */
+  margin: 0em 1em 0;
 }
 .footer_nav a {
   color: #000;
