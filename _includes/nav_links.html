@@ -2,7 +2,7 @@
 <li><a href="/css_victortokaito.github.io/gallery">Gallery</a></li>
 <li><a href="/css_victortokaito.github.io/blog/">Blog</a></li> -->
 
-<li><a href="/">Home</a></li>
-<li><a href="/gallery">Gallery</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="{{ site.posts.first.url }}">Newest Post</a></li>
+<li><a href="{{ "/" | relative_url }}">Home</a></li>
+<li><a href="{{ "/gallery" | relative_url }}">Gallery</a></li>
+<li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
+<li><a href="{{ "{{ site.posts.first.url }}" | relative_url }}">Newest Post</a></li>
