@@ -5,4 +5,4 @@
 <li><a href="{{ "/" | relative_url }}">Home</a></li>
 <li><a href="{{ "/gallery" | relative_url }}">Gallery</a></li>
 <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
-<li><a href="{{ "{{ site.posts.first.url }}" | relative_url }}">Newest Post</a></li>
+<li><a href="[{{ page.title }}]("{{ site.posts.first.url | relative_url }}")">Newest Post</a></li>
