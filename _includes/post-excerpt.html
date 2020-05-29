@@ -1,0 +1,16 @@
+<div class="blog_posts">
+  <header class="post_header">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="post_byline">
+      <!-- <img src="https://gravatar.com/avatar/ffda7d145b83c4b118f982401f962ca6?s=150"> -->
+      <img src="{{ post.gravatar }}">
+      <a href="{{ post.authorTwitter }}" class="social_link">Tw</a>
+      by: {{ post.author }}
+      <span> - {{ post.date | date: '%B %d, %Y' }}</span>
+    </div>
+  </header>
+  <div class="posts_image" style="background-image:url({{ post.postHero }})">
+</div>
+{{ post.excerpt }}
+<a href="{{ post.url }}">Read More</a>
+</div>

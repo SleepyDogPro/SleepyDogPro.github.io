@@ -1,6 +1,6 @@
 /* GLOBAL STYLES */
 html {
-  box-shadow: 0 0 0 250px #FCE2D7 inset; /* sets border of page and color of border*/
+  box-shadow: 0 0 0 16vw #FCE2D7 inset; /* sets border of page and color of border*/
   /* padding: 0 30px 0 0px; */
   padding: 0 auto;
 }
@@ -20,13 +20,19 @@ body {
 h1 {
   font-size: 7vw;
   position: relative;
-  z-index: 0;
-  margin: 0 0 100px;
+  margin-top: 0;
+  /* z-index: 0; */
+  margin: 0 0 10vh;
   /* padding-top: 30vh; */
   /* padding-top: 300px; */
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
+}
+h4 {
+  font-weight: bold;
+  color: #999;
+  /* text-transform: uppercase; */
 }
 a {
   color: #62afdb;
@@ -35,11 +41,12 @@ p {
   line-height: 1.5;
   margin: 0.75em 0;
 }
-h2 {
-  font-size: 30px;
-  margin: 10px 0 25px 355px;
+/* h2 ~ p {
+  font-size: 1.8em;
+  margin: 0px 0 0px 0px;
   padding-top: 50px;
-}
+} */
+
 
 
 /* HEADER STYLES */
@@ -99,7 +106,7 @@ h2 {
   width: 6vh;
 }
 .header_nav > li:last-child a {
-  color: #004680;
+  color: teal;
 }
 .header_nav > li:last-child a:hover,
 .header_nav > li:last-child a:active {
@@ -186,6 +193,42 @@ h2 {
 .col_aside {
     flex: 1;
 } */
+.col_two {
+  display: flex;
+  /* flex-direction: column; */
+}
+.col_two .col_aside {
+  flex: 0 0 20em;       /* flex-grow: 0; flex-shrink: 0; flex-basis: 20em; */
+  order: 1;             /* flex allows rearrangement of items in flex-container by use of style "order" */
+}
+.col_two .col_content {
+  flex: 1;                  /* flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+}
+
+/* PAGE STYLES */
+.page {
+  margin: 10vh auto 15vh;
+  max-width: 980px;
+  width: 85vw;
+}
+.page h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.page h2 {
+  margin-bottom: 0.5em;
+}
+.page h4 {
+  margin-bottom: 1em;
+}
+/* .page img {
+  border-radius: 99px;
+  height: 2.5em;
+  vertical-align: middle;
+  display: inline-block;
+} */
+
 /* HERO STYLES */
 .full_hero {  /* template */
   background-color: #FCE2D7;
@@ -208,11 +251,32 @@ h2 {
   transform: translate(-50%, 0);
 }
 .hero_home {
-  /* background-image: url(../images/Sleepy Dog Productions.jpg); */
-  /* backgroud-image: url(/images/Artboard 1@2365x-50.jpg); */
-  background-image: url(/images/Shark.jpg);
-  background-position: center top;
+  /* background-image: url(/images/IMG_4737.heic); */
+  /* background-image: url(/images/mtfitz_roy_victor_post_2.jpg); */
+  background-image: url(/images/nong-vang-9pw4TKvT3po-unsplash.jpg);
+  /* background-image: url(/images/Artboard_1@2365x-50.jpg); */
+  /* background-image: url(/images/IMG_2878_together.PNG); */
+  /* background-image: url(/images/happytogether.jpg); */
+  /* background-image: url(/images/SHARK.jpg); */
+  /* background-position: center top; */
   /* background-position: 30% center; */
+  background-position: center;
+  /* background-position: top; */
+  /* background-position: left; */
+  /* background-size: cover; */
+  /* opacity:  0.5; */
+  position: relative;
+}
+.hero_home:after {
+  content: "";
+  /* background: url(image.jpg); */
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 .hero_content { /* Since the .hero-content wrapper is already going to be 100% of the width (it’s just a normal block element), we don’t need to worry about messing with horizontal centering. Just aligning the content using text-align: center will be good enough—we only need to worry about vertical positioning, which we can do with the top: 50% and translate(0, -50%)*/
   /* color: #fff; */
@@ -223,13 +287,23 @@ h2 {
   /* width: 50%; */
 }
 .hero_content h1 {
-  color: #000;
-  /* color: rgba(255, 255, 255, 1); */
+  /* color: #004680; */
+  color: rgba(255, 255, 255, 1);
   font-size: 7vw;
   margin-bottom: 0.25em;
 }
-.hero_content .social_link {
-
+/* .hero_content .social_link {           white and black social link
+background-color: rgba(255,255,255,.8);
+color: #556c83;
+} */
+/* .hero_content .social_link:hover {
+  background-color: #000;
+  color: #fff;
+} */
+.half_hero {
+  background-position: center center;
+  background-size: cover;
+  height: 40vh;
 }
 
 /* SOCIAL STYLES –– elements used across the site */
@@ -237,10 +311,10 @@ h2 {
   background: #ffcc17;
   border-radius: 99px;
   box-sizing: border-box; /*padding and border are contained within the width of the element*/
-  color: #0000ff;
+  color: teal;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
   height: 2.5em;
   line-height: 1;
@@ -266,13 +340,27 @@ h2 {
 
 /* HOMEPAGE STYLES */
 .home_section {
+  background-color: #fff;
   margin: 6rem auto;
   max-width: 980px;
-  width: 90vw;
+  /* min-width: 480px; */
+  width: 64vw;
 }
 .home_section h2 {
+  margin-top: -2em;
   margin-bottom: 1.5rem;
+  /* text-align: center; */
+}
+.home_section h4 {
+  margin-bottom: 0.5em;
   text-align: center;
+}
+.home_section .post_header {
+  text-align: center;
+}
+.home_section .blog_posts {
+  margin: auto;
+  width: 75%;
 }
 .home_callout {
   align-items: flex-end;
@@ -285,13 +373,14 @@ h2 {
   flex-grow: 0;
   flex-basis: 45rem;
   font-size: 5vw;
-  text-align: right;
-  text-transform: uppercase;
+  text-align: center;
+  padding-left: 75px;
+  /* text-transform: uppercase; */
 }
 .callout_copy {
   font-size: 0.8rem;
   flex-shrink: 0;
-  flex-basis: 45em;
+  flex-basis: 40em;
   padding: 0 3vw;
   /* flex-grow: 1; */
 }
@@ -306,7 +395,10 @@ h2 {
   /* border: 1px dotted black; */
   border-width: 5px 5px 1px 1px;
   border-style: solid solid dotted dotted;
-  border-color: orange orange #004680 #004680;
+  /* border-color: orange orange #004680 #004680; */
+  border-color: orange orange rgba(0, 70, 128, .31) rgba(0, 70, 128, .31);
+  /* border-color: orange orange rgba(0, 70, 128, .71) rgba(0, 70, 128, .71); */
+
   /* border-color: orange orange transparent transparent; */
   box-sizing: border-box;
   float: left;
@@ -346,7 +438,8 @@ h2 {
   /* border: 1px dashed black; */
   border-style: dashed;
   border-width: 5px 5px 1px 1px;
-  border-color: orange orange #004680 #004680;
+  /* border-color: orange orange #004680 #004680; */
+  border-color: orange orange rgba(0, 70, 128, .71) rgba(0, 70, 128, .71);
   /* padding-top: 2vh;
   position: absolute;
   width: 33%;
@@ -373,6 +466,7 @@ h2 {
 }
 .gallery_thumbs img:hover {
   opacity: 1;
+   /* width: 50%; */
 }
 .gallery_thumbs .current img {
   box-shadow: 0 0 0 5px #ed6e2f;
@@ -392,10 +486,92 @@ h2 {
   margin-bottom: 1em;
 }
 
+/* BLOG STYLES */
+.blog_recent {
+  text-align: right;
+}
+.blog_title_list {
+  list-style: none;
+  padding: 0;
+}
+.blog_title_list li ~ li { /* general sibling selector: everything after the first one */
+  margin-top: 1.5em;
+}
+.blog_title_list span {
+  color: #999;
+  display: block;       /* Put it in a span (gets its own line). Then, you can display:block it, so that it's on a new line.*/
+  font-size: .8em;
+  font-style: italic;
+  margin-top: 0.5em;
+}
 
+.blog_posts ~ .blog_posts {     /*general sibling selector: targets all after the first one*/
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  margin-top: 4em;
+  padding-top: 4em;
+}
+.blog_posts .post_header {
+  font-size: 0.8rem;
 
-
-
+}
+.post_header {
+  margin-bottom: 1.5em;
+}
+.post_header img,
+.post_header .social_link {
+  margin-right: 0.5em;
+}
+.post_header img {
+  border-radius: 99px;
+  display: inline-block;
+  height: 2.5em;
+  vertical-align: middle;
+  /* display: block; */         /*I like this. Looks like a cool profile tag with link at the bottom left-corner.*/
+}
+/* preview images for the blog post @blog index */
+.posts_image {
+  background-position: center;
+  background-size: cover;
+  height: 6em;
+  margin-bottom: 1.5em;
+}
+.post {
+  width: 100%;
+}
+.post_content,
+.post_footer {
+  margin: auto;
+  max-width: 40em;
+  width: 85vw;
+}
+.pull_left {
+  float: left;
+  margin: 2em 2em 2em -2%;
+}
+.pull_right {
+  float: right;
+  margin: 2em -2% 2em 2em;
+}
+.post_aside {
+  background-color: rgba(0, 0, 0, 0.03);
+  float: right;
+  margin: 0 0 2em 2em;
+  padding: 2em;
+}
+.post .post_header {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+.post_content {
+  font-size: 1.1em;
+}
+.post_footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 3em;
+  padding-top: 2em;
+}
 /*
 .hero_home {
 } */

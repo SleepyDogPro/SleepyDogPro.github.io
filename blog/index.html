@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="page blog_index"> <!-- sometimes, it's good to have multiple classes just in-case we want to use "page" as a general class-style we can take with us to different pages. For more specific use, we can use the "blog_index" class-style-->
+  <h1>bloggie blog by babe's baby</h1>
+  <!-- <img src="images/IMG_2878_copy.PNG" alt="a beautiful boy." style="height: 150px;"> -->
+  <div class="col_two blog_cols">
+    <div class="col col_aside blog_recent">
+      <h4>Recent Posts</h4>
+      <ul class="blog_title_list">
+        {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span>Posted: {{ post.date | date: '%B %d, %Y' }}
+            by {{ post.author }}  <img src="{{ post.gravatar }}" style="height: 2em; border-radius: 99px;"> </span>
+
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col col_content blog_previews">
+
+        {% for post in site.posts %}
+        {% include post-excerpt.html %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
