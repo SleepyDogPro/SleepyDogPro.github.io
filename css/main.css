@@ -655,25 +655,32 @@ h1.callout_title {
 .gallery .col {
   padding: 1em;
 }
-.gallery .gallery-thumbs {
+.col_three .col_nav {
   flex: 1;
   height: auto;
   white-space: nowrap;
   width: 100vw;
 }
-.gallery-thumbs > div {
+
+.gallery .gallery_thumbs {
+  flex: 1
+  height: auto;
+  white-space: nowrap;
+  width: 100vw;
+}
+.gallery_thumbs > div {
   display: inline-block;
 }
-.gallery-thumbs img {
+.gallery_thumbs img {
   height: 7vh;
   margin: 0 10px 0 0;
   width: auto;
 }
-.gallery .gallery-info {
+.gallery .gallery_info {
   flex: 1;
 }
 
-
+  /* flex-direction: row; */
 /* BLOG STYLES */
 .post_aside {
     display: none;
@@ -684,6 +691,10 @@ h1.callout_title {
 }
 .col_two .col_aside {
   /* order: 0; */
+  /* text-align: center; */
+}
+.blog_recent {
+  flex: 1;
   /* text-align: center; */
 }
 }
