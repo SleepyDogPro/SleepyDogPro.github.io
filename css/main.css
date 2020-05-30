@@ -211,6 +211,10 @@ p {
 .footer .drop_trigger {
   padding-right: 0;
 }
+.mobile_menu_check,
+.show_mobile_menu {
+  display: none;
+}
 
 /* FOOTER STYLES */
 .footer {
@@ -711,10 +715,11 @@ html .blog_index {
 .show_mobile_menu {
   display: block;
   float: right;
-  margin-top: 1.5vh
+  margin-top: 1.5vh;
   padding: 1.5em;
   position: relative;
 }
+
 .header_nav {
   background-color: #444;
   box-sizing: border-box;
@@ -755,7 +760,7 @@ html .blog_index {
   max-height: 1000px;
 }
 .mobile_menu_check:checked ~ .show_mobile_menu:after {
-  background-color: #000;
+  background-color: #fff;
   color: #ed6e2f;
   content: "CLOSE";
   left: 0;
