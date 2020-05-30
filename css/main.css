@@ -390,6 +390,19 @@ color: #556c83;
   padding: 0 3vw;
   /* flex-grow: 1; */
 }
+.home_callout {
+  border-bottom: 1px dotted rgba(0,0,0,.1);
+  width: auto;
+}
+.background > p {
+  font-style: italic;
+}
+.most_recent_post {
+  /* border-top: 1px solid rgba(0,0,0,.1); */
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  /* padding-top: 10vh; */
+  padding-bottom: 12vh;
+}
 
 /* MODULES (BIO STYLES)*/
 .bio_wrapper {
@@ -429,7 +442,9 @@ color: #556c83;
   /* filter: grayscale(100%) */
   /* z-index: -1; */
 }
-
+/* .bio_box .social_link{
+  text-align: center;
+} */
 .bio_box .social_link {
   display: block;
   margin: 1em 0;
@@ -582,6 +597,103 @@ html .blog_index {
   margin-top: 3em;
   padding-top: 2em;
 }
+
+@media (max-width: 800px) {       /* when the browser window is less than 800px, then apply the styles that are inside of this */
+  html {                          /* breakpoint@800px */
+    box-shadow: none;
+    padding: 0;
+  }
+
+/* HEADER STYLES */
+.header_nav {
+  padding: 2vh 1em 0 0;
+}
+.header_nav > li {
+  margin-left: 0.25em;
+}
+.header_nav > li ~ li {
+  padding-left: 0.5em;
+}
+.nav_links a {
+  font-size: 3vw;
+}
+.header_logo {
+    left: auto;
+}
+
+/* HOMEPAGE STYLES */
+.home_callout {
+  flex-direction: column;
+  align-items: center;
+}
+.callout_copy {
+  flex: 1;
+}
+.callout_title {
+  flex: 1;
+  width: auto;
+  padding: 0;
+}
+h1.callout_title {
+  margin: 0 0 2vh;
+}
+.bio_box {
+  float: none;
+  font-size: 1.3rem;
+  width: auto;
+  border-left: none;
+  border-bottom: none;
+}
+.callout_copy {
+  font-size: 1rem;
+}
+
+/* GALLERY STYLES */
+.gallery {
+  flex-direction: column;
+}
+.gallery .col {
+  padding: 1em;
+}
+.gallery .gallery-thumbs {
+  flex: 1;
+  height: auto;
+  white-space: nowrap;
+  width: 100vw;
+}
+.gallery-thumbs > div {
+  display: inline-block;
+}
+.gallery-thumbs img {
+  height: 7vh;
+  margin: 0 10px 0 0;
+  width: auto;
+}
+.gallery .gallery-info {
+  flex: 1;
+}
+
+
+/* BLOG STYLES */
+.post_aside {
+    display: none;
+  }
+.blog_cols {
+  display: flex;
+  flex-direction: column;
+}
+.col_two .col_aside {
+  /* order: 0; */
+  /* text-align: center; */
+}
+}
+/*
+@media (max-width: 600px) {
+  .half_hero {
+    display: none;
+  }
+} */
+
 /*
 .hero_home {
 } */
