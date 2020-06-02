@@ -8,7 +8,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: helvetica, arial, sans;
+  font-family: 'Open Sans', helvetica, arial, sans;
   min-height: 100vh;
 }
 .content_container {
@@ -17,6 +17,15 @@ body {
   padding-top: 10vh;
   width: 100%;
   /* box-sizing: border-border-box; */
+}
+h1, h2, h4, h5, h6 {
+  font-family: 'Raleway', helvetica, sans;
+  font-weight: 100;
+}
+h3 {
+  font-family: 'Raleway';
+  font-weight: 300;
+  /* font-style: italic; */
 }
 h1 {
   font-size: 7vw;
@@ -404,10 +413,10 @@ color: #556c83;
 }
 
 /* SOCIAL STYLES –– elements used across the site */
-.social_link {    /*Global styles that––no matter where they are used on the site––will look uniform*/
+.social_link {
   background: #ffcc17;
   border-radius: 99px;
-  box-sizing: border-box; /*padding and border are contained within the width of the element*/
+  box-sizing: border-box;
   color: teal;
   display: inline-block;
   font-family: helvetica, arial, sans;
@@ -415,12 +424,30 @@ color: #556c83;
   font-weight: bold;
   height: 2.5em;
   line-height: 1;
-  padding-top: .6em;
+  padding-top: .75em;
   text-align: center;
   text-decoration: none;
   width: 2.5em;
-  /* height: 1rem; */
-}
+  }
+
+/* .social_link {
+  background: #ffcc17;
+  border-radius: 99px;
+  box-sizing: border-box;
+  color: teal;
+  display: inline-block;
+  font-family: helvetica, arial, sans;
+  font-size: 1.7em;
+  font-weight: bold;
+  height: 1.5em;
+  line-height: 1;
+  padding-top: .25em;
+  text-align: center;
+  text-decoration: none;
+  width: 1.5em;
+}  */
+/*Global styles that––no matter where they are used on the site––will look uniform*/
+/*padding and border are contained within the width of the element*/
 .social_link:hover,
 .social_link:active {
   background-color: rgba(237, 110, 47, .8);
@@ -585,7 +612,7 @@ color: #556c83;
 }
 .gallery_photo {
   position: relative;
-  transform: rotate(20deg);
+  /* transform: rotate(20deg); */
 }
 .gallery_photo img {
   width: 100%;
@@ -758,11 +785,13 @@ html .blog_index {
 }
 .mobile_menu_check:checked ~ .header_nav {
   max-height: 1000px;
+  /* height: 90vh; */
+
 }
 .mobile_menu_check:checked ~ .show_mobile_menu:after {
   background-color: #fff;
   color: #ed6e2f;
-  content: "CLOSE";
+  content: "X";
   left: 0;
   position: absolute;
   top: 1.5em;
